@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/layoutTeamAB"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/aaaa"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/layoutTeamA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="1"
+            tools:context="com.example.android.scorekeep.MainActivity">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutTeamB"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context="com.example.android.scorekeep.MainActivity">
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnVictoryTeamB"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/ball"
+        android:onClick="addOnePointB"
+        android:layout_above="@+id/btnNewGame"
+        android:layout_toEndOf="@+id/txtTeamScoreB" />
+    <Button
+        android:id="@+id/btnVictoryTeamA"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/ball"
+        android:onClick="addOnePointA"
+        android:layout_below="@+id/btnNewGame"
+        android:layout_toStartOf="@+id/txtTeamScoreA" />
+
+    <TextView
+        android:id="@+id/txtTeamScoreA"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+
+        android:gravity="center_horizontal"
+        android:text="0"
+        android:textColor="@android:color/background_dark"
+        android:textSize="36sp"
+        android:layout_below="@+id/layoutTeamA"
+        android:layout_alignStart="@+id/txtTeamScoreB"
+        />
+
+    <Button
+        android:id="@+id/btnNewGame"
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:fontFamily="monospace"
+        android:text="New Game"
+        android:textSize="14sp"
+        android:typeface="sans"
+        android:onClick="ResetScore"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/txtTeamScoreB"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+
+        android:gravity="center_horizontal"
+        android:text="0"
+        android:textColor="@android:color/background_dark"
+        android:textSize="36sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/txtTeamNameA"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:gravity="center_horizontal"
+        android:text="Team's Name"
+        android:textColor="?android:attr/colorLongPressedHighlight"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/txtTeamScoreA"
+        android:layout_alignEnd="@+id/btnNewGame"
+        />
+
+    <EditText
+        android:id="@+id/txtTeamNameB"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:gravity="center_horizontal"
+        android:text="Team's Name"
+        android:textColor="?android:attr/colorLongPressedHighlight"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_above="@+id/txtTeamScoreB"
+        android:layout_alignStart="@+id/btnNewGame" />
+
+
+
+    />
+</RelativeLayout>
+</RelativeLayout>
