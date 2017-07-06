@@ -114,8 +114,5 @@
         android:layout_above="@+id/txtTeamScoreB"
         android:layout_alignStart="@+id/btnNewGame" />
 
-
-
-    />
 </RelativeLayout>
 </RelativeLayout>
